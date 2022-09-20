@@ -16,10 +16,11 @@ def index():
 @app.route('/live/')
 def live():
     game = GameOfLife()
+    count_def = game.counter
     if game.counter > 0:
         game.form_new_generation()
     game.counter += 1
-    return render_template('live.html', game = game)
+    return render_template('live.html', game = game, count_def=count_def)
 
 if __name__ == '__main__':
     app.run(host='localhost', port=5000, debug=True)

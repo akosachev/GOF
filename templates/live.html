@@ -17,11 +17,11 @@
     </tr>
     {% endfor %}
 </table>
-<div class="counter">Счетчик: {{ game.counter }}</div>
+<div class="counter">Счетчик: {{ game.counter }} {{count_def}}</div>
 {% endblock %}
 {% block scripts %}
     {{ super() }}
-    <script>
-        setInterval(() => window.location.reload(), 1000);
-    </script>
+<!--    <script>-->
+<!--        setInterval(() => window.location.reload(), 1000);-->
+<!--    </script>-->
 {% endblock %}
